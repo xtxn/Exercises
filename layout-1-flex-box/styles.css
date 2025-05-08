@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #eeece6;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #eeece6;
+    font-size: 24px;
+}
+
+a {
+    color: #eeece6;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: #ab836a;
+}
+
+i {
+    font-size: 40px;
+}
+
+.border15 {
+    border-radius: 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 50px 50px 25px 50px;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+header section {
+    display: flex;
+    gap: 25px;
+    font-style: italic;
+    flex-wrap: wrap;
+}
+
+.logo-field {
+    /* width: 60%; */
+    background-color: #ab836a;
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.search-field {
+    background-color: #685b4d;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-container {
+    max-width: 50%;
+    background-color: #685b4d;
+    flex-grow: 1;
+}
+
+.nav-container ul {
+    display: flex;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+/* 
+.search-btn {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+#search {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    margin: 50px 50px 20px 50px;
+}
+
+.logo-search-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 0;
+
+}
+
+.logo-icon {
+    width: 40%;
+    background-color: #ab836a;
+    align-content: center;
+    text-align: center;
+    margin: 0 20px 0 0;
+    gap: 50px;
+}
+
+.search-field {
+    width: 60%;
+    background-color: #685b4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-container {
+    width: 50%;
+    background-color: #685b4d;
+    margin: 0 0 0 10px;
+
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-icon {
+    color: white;
+    text-transform: uppercase;
+}
+*/
