@@ -1,6 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body,
+@layer resets {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+@layer colors {
+    :root {
+        --c-white: #FFFFFF;
+        --c-orange-800: #FF9100;
+        --c-red-400: #FC4C50;
+        --c-blue-50: #E3F3FD;
+        --c-blue-400: #44A9F8;
+        --c-green-50: #DFF4F1;
+        --c-green-300: #41BEAD;
+        --c-grey-500: #919191;
+        --c-grey-700: #565656;
+    }
+}
+
+:root {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* line-height: 1.5; */
+}
+
+.body {
+    background: var(--c-white);
+}
+
+/* navigation menu*/
+.nav__container,
+.nav__logo,
+.nav__links {
+    display: flex;
+}
+
+.nav__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1288px;
+}
+
+.nav__links {
+    text-transform: uppercase;
+    color: var(--c-grey-700);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    flex-grow: 1;
+    justify-content: end;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.nav__links li {
+    padding: 1.875rem 1.5rem;
+}
+
+.nav__links li a:hover {
+    color: var(--c-orange-800);
+    cursor: pointer;
+}
+
+.btn {
+    border: none;
+    text-transform: uppercase;
+    color: var(--c-white);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background: var(--c-orange-800);
+    border-radius: 18px;
+    padding: 0.625rem 1.375rem;
+}
+
+/* banner */
+.banner {
+    background: var(--c-orange-800);
+    color: var(--c-white);
+    text-align: center;
+
+}
+
+.banner div {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 0;
+    max-width: 850px;
+}
+
+.banner h1 {
+    font-size: 2.25rem;
+    padding: 0 0 1.5rem 0;
+}
+
+/* .banner h1 {} */
+
+
+/* body,
 ul {
     padding: 0;
     margin: 0;
@@ -75,4 +192,4 @@ ul {
     width: 82px;
     height: 36px;
     border-radius: 18px;
-}
+} */
