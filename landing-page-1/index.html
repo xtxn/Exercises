@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header class="nav">
-        <nav class="nav__container">
+        <nav class="nav__container" aria-label="Header navigation">
             <div class="nav__logo">
-                <img class="arrow" src=" ./images/LogoIcon.png">
-                <img src="./images/SoftUniKidsLogo.png" alt="SoftUni Kids Logo">
+                <img class="nav--arrow" src=" ./images/LogoIcon.png">
+                <img class="nav--logo" src="./images/SoftUniKidsLogo.png" alt="SoftUni Kids Logo">
             </div>
             <ul class="nav__links">
                 <li>
@@ -31,15 +34,13 @@
                 <li>
                     <a href="#">Контакти</a>
                 </li>
-                <li>
-                    <img class="search--icon" src="./images/Search.png" alt="Search Icon">
-                </li>
-                <li>
-                    <button class="btn nav__btn">
-                        Вход
-                    </button>
-                </li>
             </ul>
+            <div class="nav__btn">
+                <img class="nav--search" src="./images/Search.png" alt="Search Icon">
+                <button class="btn nav--btn">
+                    Вход
+                </button>
+            </div>
         </nav>
     </header>
     <main>
@@ -47,16 +48,95 @@
             <div>
                 <h1>Обучения</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas officia rem praesentium harum facilis
-                    iste sint ut velit odit officiis repudiandae eaque et, sapiente repellat aperiam architecto laborum
-                    animi corporis ab minima possimus eius magnam? Nostrum labore nemo porro ad. Expedita nisi
-                    voluptatibus, quos beatae vero voluptates dolorum. Excepturi, incidunt?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facere, error expedita porro
+                    quisquam quod magni illo adipisci officiis deleniti consectetur modi? Dignissimos non necessitatibus
+                    dolore quibusdam est ut? Corporis, quasi sunt. Ut doloribus delectus earum minima! Ducimus, possimus
+                    doloribus!
                 </p>
             </div>
+        </section>
+        <section class="filter">
 
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer__wrapper">
+            <img class="footer--figure" src="images/footer_avatar.png"
+                alt="Cute yellow figure with one eye and a smile">
+            <div class="footer__flex-wrapper">
+                <nav class="footer__container" aria-label="Footer navigation">
+                    <h3>
+                        Softuni Kids
+                    </h3>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#">Начало</a>
+                        </li>
+                        <li>
+                            <a href="#">Летни академии</a>
+                        </li>
+                        <li>
+                            <a href="#">Преподаватели</a>
+                        </li>
+                        <li>
+                            <a href="#">Блог</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакти</a>
+                        </li>
+                        <li>
+                            <a href="#">Общи условия</a>
+                        </li>
+                        <li>
+                            <a href="#">Лични данни</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer__container">
+                    <h3>Всички обучения</h3>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#">Курсове</a>
+                        </li>
+                        <li>
+                            <a href="#">Събития</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer__container">
+                    <h3>
+                        Всички инициативи
+                    </h3>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#">Software University</a>
+                        </li>
+                        <li>
+                            <a href="#">SoftUni Digital</a>
+                        </li>
+                        <li>
+                            <a href="#">SoftUni Creative</a>
+                        </li>
+                        <li>
+                            <a href="#">SoftUni Svetlina</a>
+                        </li>
+                        <li>
+                            <a href="#">SoftUni Foundation</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="socials footer__container">
+                    <h3>
+                        Намери ни
+                    </h3>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p> &copy 2016-2020 - SoftUni Kids. </p>
+                    <p>All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
