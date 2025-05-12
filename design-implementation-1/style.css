@@ -1,4 +1,4 @@
-@colors {
+@layer colors {
     :root {
         --clr-white: #ffffff;
         --clr-grey-50: #f8f8f8;
@@ -12,4 +12,48 @@
         --clr-grey-800: #222222;
         --clr-accent-green: #00c8c8;
     }
+}
+
+@layer resets {
+    * {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.header__top-bar {
+    height: 45px;
+    background-color: var(--clr-grey-700);
+}
+
+/* .nav__main {
+    display: flex;
+} */
+
+.nav__main__wrapper {
+    max-width: 1780px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+
+}
+
+.nav__main__wrapper nav {
+    flex-grow: 1;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: end;
+}
+
+.nav__search {
+    display: flex;
+
 }
