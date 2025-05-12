@@ -1,0 +1,15 @@
+@colors {
+    :root {
+        --clr-white: #ffffff;
+        --clr-grey-50: #f8f8f8;
+        --clr-grey-400: #999999;
+        --clr-grey-450: #989898;
+        --clr-grey-500: #777777;
+        --clr-grey-550: #727272;
+        --clr-grey-600: #575153;
+        --clr-grey-650: #454647;
+        --clr-grey-700: #333333;
+        --clr-grey-800: #222222;
+        --clr-accent-green: #00c8c8;
+    }
+}
