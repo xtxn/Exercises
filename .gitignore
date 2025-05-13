@@ -8,3 +8,4 @@
 *.docx
 *.rar
 *.zip
+.vscode/settings.json
