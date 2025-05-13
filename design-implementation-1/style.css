@@ -51,9 +51,12 @@ body {
 .nav__links {
     display: flex;
     justify-content: end;
+    gap: 55px;
+
 }
 
 .nav__search {
     display: flex;
+    margin-left: 115px;
 
 }
