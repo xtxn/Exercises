@@ -1,0 +1,19 @@
+{
+  "name": "06-string-builder",
+  "version": "1.0.0",
+  "main": "06-string-builder.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.6.0"
+  }
+}
