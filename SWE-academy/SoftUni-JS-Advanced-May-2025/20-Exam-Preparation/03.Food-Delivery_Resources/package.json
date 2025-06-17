@@ -1,0 +1,20 @@
+{
+  "name": "03.food-delivery_resources",
+  "version": "1.0.0",
+  "main": "food delivery.js",
+    "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.6.0"
+  }
+}
