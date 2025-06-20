@@ -1,0 +1,19 @@
+{
+  "name": "03.art-gallery_resources",
+  "version": "1.0.0",
+  "main": "artGallery.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.7.0"
+  }
+}
