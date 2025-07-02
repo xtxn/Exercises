@@ -1,0 +1,64 @@
+@layer global {
+    * {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    body {
+        font-family: "DM Sans", Arial, Helvetica, sans-serif;
+    }
+
+}
+
+@layer colors {
+    :root {
+        --clr-white: #ffffff;
+        --clr-grey-10: #E5E5E5;
+        --clr-grey-50: #F5F5F5;
+        --clr-grey-600: #4F4F53;
+        --clr-black: #000000;
+        --clr-orange-100: #F2DBB1;
+        --clr-orange-400: #DD9115;
+
+        --color-background-black: var(--clr-black);
+        --color-background-white: var(--clr-white);
+    }
+}
+
+@layer typography {
+    :root {
+        --fs-66: calc(66/16*1rem);
+
+
+        h1 {
+            font-size: var(--fs-66);
+            color: var(--clr-white);
+            line-height: 120%;
+        }
+
+    }
+}
+
+.header-section {
+    background-image: url("images/places-to-visit-in-bulgaria.jpg");
+    background-size: 2000px 2000px;
+    max-width: 1400px;
+    height: 772px;
+    margin: 20px auto;
+    border-radius: 16px;
+}
+
+
+.nav--links {
+    background-color: red;
+    display: flex;
+}
