@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
 input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
@@ -7,6 +7,7 @@ input[type=text] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 input[type=button] {
     background-color: #4CAF50;
     color: white;
@@ -15,9 +16,11 @@ input[type=button] {
     border-radius: 4px;
     cursor: pointer;
 }
+
 input[type=button]:hover {
     background-color: #45a049;
 }
+
 body {
     margin: auto;
     width: 25%;
@@ -25,6 +28,7 @@ body {
     padding: 20px;
     font-family: 'Open Sans', serif;
 }
+
 #stopName {
     font-size: 1.5em;
     margin: 8px 0;
