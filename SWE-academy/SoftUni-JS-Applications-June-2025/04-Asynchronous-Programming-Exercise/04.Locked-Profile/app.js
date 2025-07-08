@@ -53,21 +53,18 @@ async function lockedProfile() {
     }
 
     function onToggle(event) {
-        // This is the event handler for the "Show more" / "Hide it" button
+
         const button = event.target;
         const profileDiv = button.parentElement;
 
-        // Find the "unlock" radio button within this specific profile
         const unlockRadio = profileDiv.querySelector('input[value="unlock"]');
 
-        // Check if the profile is unlocked. If not, do nothing.
         if (!unlockRadio.checked) {
             return;
         }
 
-        const hiddenFields = profileDiv.querySelector('div'); // The first div inside is the hidden one
+        const hiddenFields = profileDiv.querySelector('div');
 
-        // Toggle the display and button text
         if (hiddenFields.style.display === 'none') {
             hiddenFields.style.display = 'block';
             button.textContent = 'Hide it';
