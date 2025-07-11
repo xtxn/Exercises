@@ -8,7 +8,9 @@
 *.docx
 *.rar
 *.zip
+*.fig
 .vscode/settings.json
 
 node_modules/
 package-lock.json
+SWE-academy/Sirma-HTML-CSS-June-2025/06-Exam-Prep/Bulgaria Exam.fig
