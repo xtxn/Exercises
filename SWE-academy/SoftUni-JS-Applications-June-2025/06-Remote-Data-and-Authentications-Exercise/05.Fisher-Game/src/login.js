@@ -23,14 +23,18 @@ function login(params) {
             },
             body: JSON.stringify(data),
         }
+        try {
+            let response = await fetch(url, options);
+            if (!response.ok) {
+                throw new Error('This use doesn\'t exist');
+            }
+            const userData = await response.json();
 
-        let response = await fetch(url, options);
-        const userData = await response.json();
-
-        sessionStorage.setItem('userData', JSON.stringify(userData));
-        window.location = 'index.html';
-
-
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+            window.location = 'index.html';
+        } catch (error) {
+            alert('This use doesn\'t exist');
+        }
     };
 };
 
