@@ -1,4 +1,4 @@
-function register(params) {
+function register() {
     const form = document.querySelector('form#register');
     const url = 'http://localhost:3030/users/register';
 
@@ -26,7 +26,7 @@ function register(params) {
         const options = {
             method: 'POST',
             headers: {
-                'content-type': 'application/JSON'
+                'Content-Type': 'application/JSON'
             },
             body: JSON.stringify({ email, password })
         };
@@ -39,6 +39,7 @@ function register(params) {
 
             sessionStorage.setItem('userData', JSON.stringify(userData));
             window.location = 'index.html'
+
         } catch (error) {
             alert('Cannot connect to server')
         };

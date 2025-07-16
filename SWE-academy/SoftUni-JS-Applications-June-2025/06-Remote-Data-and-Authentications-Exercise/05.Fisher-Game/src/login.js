@@ -1,4 +1,4 @@
-function login(params) {
+function login() {
     const btnNavLogin = document.getElementById('login');
     const form = document.querySelector('form#login');
     const inputEmail = document.querySelector('input[name="email"]');
@@ -19,7 +19,7 @@ function login(params) {
         const options = {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data),
         }
