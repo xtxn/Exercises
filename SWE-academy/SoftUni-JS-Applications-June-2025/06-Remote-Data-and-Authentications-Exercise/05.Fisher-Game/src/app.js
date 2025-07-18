@@ -19,7 +19,6 @@ function app() {
 
     updateNav();
 
-
     async function onLogout() {
 
         const option = {
@@ -75,7 +74,7 @@ function app() {
                 const div = document.createElement('div');
                 div.classList.add('catch');
                 div.innerHTML = createContent(el);
-                if (userData._id === el._ownerId) {
+                if (userData?._id === el._ownerId) {
                     const inputs = div.querySelectorAll('input');
                     inputs.forEach(input => input.disabled = false);
 
