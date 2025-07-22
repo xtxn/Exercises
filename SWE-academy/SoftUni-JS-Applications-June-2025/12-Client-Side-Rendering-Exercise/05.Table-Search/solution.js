@@ -28,8 +28,9 @@ function onClick(e) {
    for (const el of allEl) {
       if (el.textContent.toLowerCase().includes(searchField.value.toLowerCase())) {
          el.parentElement.classList.add('select');
-      }
-   }
+      };
+   };
+   searchField.value = '';
 }
 
 const rowTemplate = (data) =>
