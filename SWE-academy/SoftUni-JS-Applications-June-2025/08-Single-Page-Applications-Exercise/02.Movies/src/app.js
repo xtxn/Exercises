@@ -2,18 +2,8 @@ import { showHome } from "../views/homeView.js";
 import { showRegister } from "../views/registerView.js";
 import { showLogin } from "../views/loginView.js";
 import { showAdd } from "../views/addView.js";
+// import { endPoints } from "./utils.js";
 
-// const endpoints = {
-//     allMovies: '/data/movies',
-//     createMovie: '/data/movies',
-//     updateMovie: (id) => `/data/movies/${id}`,
-//     deleteMovie: (id) => `/data/movies/${id}`,
-//     likes: (movieId) =>
-//         `/data/likes?where=movieId%3D%22${movieId}%22&distinct=_ownerId&count`,
-//     getLike: (movieId, userId) =>
-//         `/data/likes?where=movieId%3D%22${movieId}%22%20and%20_ownerId%3D%22${userId}%22`,
-//     addLike: '/data/likes',
-// };
 
 const routes = {
     '/': showHome,
@@ -22,7 +12,6 @@ const routes = {
     '/create': showAdd,
     // '/logout': logout,
 };
-
 
 const navbar = document.querySelector('.navbar');
 navbar.addEventListener('click', onNavigate);
@@ -46,3 +35,4 @@ function onNavigate(event) {
 const editView = document.getElementById('edit-movie');
 const detailsView = document.getElementById('movie-example');
 showHome();
+
