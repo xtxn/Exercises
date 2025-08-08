@@ -3,14 +3,14 @@ import { getUserData } from "../utils/userSession.js";
 
 const navTemplate = (user) => html`
     <div>
-        <a href="#">Motorcycles</a>
+        <a href="/dashboard">Motorcycles</a>
         <a href="/search">Search</a>
     </div>
 ${user
         ? html`
 <div class="user">
-    <a href="#">Add Motorcycle</a>
-    <a href="javascript:void(0)">Logout</a>
+    <a href="/create">Add Motorcycle</a>
+    <a href="/logout">Logout</a>
 </div>`
         : html`
 <div class="guest">
