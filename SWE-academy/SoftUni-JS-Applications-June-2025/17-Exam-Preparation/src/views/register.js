@@ -34,7 +34,7 @@ export function registerView(ctx) {
             }
 
             if (password != rePassword) {
-                throw new Error('Password don\'t match')
+                throw new Error('Passwords don\'t match')
             }
             await register(email, password);
             updateNav();
