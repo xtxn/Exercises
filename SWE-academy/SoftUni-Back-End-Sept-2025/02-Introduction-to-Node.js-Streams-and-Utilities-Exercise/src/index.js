@@ -12,7 +12,7 @@ const server = http.createServer(async (req, res) => {
     if (location === '/styles/site.css') {
         res.writeHead(200, { 'content-type': 'text/css' })
         const html = await fs.readFile(`./src/content/styles/site.css`);
-        res.write(html.toString());
+        res.write(html);
         res.end();
 
         // Load Home Page
@@ -44,7 +44,7 @@ const server = http.createServer(async (req, res) => {
                 body += chunk.toString();
             });
 
-            req.on('end', () => {
+            req.on('end', async () => {
                 const formData = new URLSearchParams(body);
                 const currentCat = Object.fromEntries(formData);
                 const newCat = {
@@ -52,7 +52,7 @@ const server = http.createServer(async (req, res) => {
                     ...currentCat
                 }
 
-                addCat(newCat);
+                await addCat(newCat);
                 res.writeHead(302, { 'Location': '/' });
                 res.end();
             })
@@ -85,6 +85,17 @@ const server = http.createServer(async (req, res) => {
                 res.end();
             }))
         }
+
+        // Edit cat
+    } else if (location.startsWith('/cats/edit/')) {
+        const catId = req.url.split('/')[3];
+        const cat = await getCat(catId);
+
+        const html = await editCatView(cat);
+        res.writeHead(200, { 'content-type': 'text/html' })
+        res.write(html);
+        res.end();
+
     }
 });
 
@@ -109,9 +120,31 @@ async function getAllCats() {
     return JSON.parse(catsData);
 }
 
+async function getCat(catId) {
+    const cats = await getAllCats();
+    return cats.find(cat => cat.id === catId);
+}
+
+async function editCatView(cat) {
+    let breeds = await getAllBreeds();
+    breeds = breeds.filter(breed => breed != cat.breed);
+    const breedsTemplate = breeds.map(breed =>
+        `<option value="${breed}">${breed}</option>`
+    ).join('\n');
+
+
+    let html = await fs.readFile('./src/views/editCat.html', 'utf8');
+    html = html.replace('{{name}}', cat.name);
+    html = html.replace('{{description}}', cat.description);
+    html = html.replace('{{imageUrl}}', cat.imageUrl);
+    html = html.replace('{{breed}}', cat.breed);
+    html = html.replace('{{breeds}}', breedsTemplate);
+
+    return html;
+}
+
 async function displayAllCats(cats) {
     const templateHtml = await fs.readFile('./src/views/index.html', 'utf8');
-    // const cats = await getAllCats();
 
     const catCards = cats.map(cat => `
              <li>
@@ -120,8 +153,8 @@ async function displayAllCats(cats) {
                     <p><span>Breed: </span>${cat.breed}</p>
                     <p><span>Description: </span>${cat.description}</p>
                     <ul class="buttons">
-                        <li class="btn edit"><a href="">Change Info</a></li>
-                        <li class="btn delete"><a href="">New Home</a></li>
+                        <li class="btn edit"><a href="/cats/edit/${cat.id}">Change Info</a></li>
+                        <li class="btn delete"><a href="/cats/shelter/${cat.id}">New Home</a></li>
                     </ul>
                 </li>
             `).join('\n');
