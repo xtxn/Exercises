@@ -17,6 +17,7 @@ const server = http.createServer(async (req, res) => {
 
         // Load Home Page
     } else if (location === '/') {
+
         const cats = await getAllCats();
         res.writeHead(200, { 'content-type': 'text/html' });
         res.write(await displayAllCats(cats));
@@ -26,7 +27,7 @@ const server = http.createServer(async (req, res) => {
     } else if (location === '/cats/add-cat') {
         if (req.method === "GET") {
             const templateHtml = await fs.readFile('./src/views/addCat.html', 'utf8');
-            const breeds = await getAllBreeds();;
+            const breeds = await getAllBreeds();
 
             const breedsTemplate = breeds.map(breed =>
                 `<option value="${breed}">${breed}</option>`
@@ -104,13 +105,24 @@ const server = http.createServer(async (req, res) => {
             req.on('end', async () => {
                 const formData = new URLSearchParams(body);
                 const updatedCat = Object.fromEntries(formData);
-                console.log(updateCats);
                 const cats = await updateCats(updatedCat, catId);
                 await fs.writeFile('./src/dbCats.json', JSON.stringify(cats, null, 2), 'utf8');
 
                 res.writeHead(302, { 'Location': '/' });
                 res.end();
             })
+        }
+
+        // Shelter Cat
+    } else if (location.startsWith('/cats/shelter/')) {
+        const catId = req.url.split('/')[3];
+        const cat = await getCat(catId);
+
+        if (req.method === 'GET') {
+            const html = await shelterCatView(cat);
+            res.writeHead(200, { 'content-type': 'text/html' });
+            res.write(html);
+            res.end();
         }
     }
 });
@@ -158,9 +170,19 @@ async function editCatView(cat) {
     return html;
 }
 
+async function shelterCatView(cat) {
+    let html = await fs.readFile('./src/views/catShelter.html', 'utf8');
+    html = html.replace('{{name}}', cat.name);
+    html = html.replace('{{description}}', cat.description);
+    html = html.replace('{{imageUrl}}', cat.imageUrl);
+    html = html.replace('{{breed}}', cat.breed);
+
+    return html;
+}
+
 async function updateCats(updatedCat, catId) {
     let cats = await getAllCats();
-    cats = cats.map(cat => cat.id === catId ? { ...updatedCat } : cat);
+    cats = cats.map(cat => cat.id === catId ? { id: catId, ...updatedCat } : cat);
     return cats;
 }
 
