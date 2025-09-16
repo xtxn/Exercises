@@ -123,6 +123,10 @@ const server = http.createServer(async (req, res) => {
             res.writeHead(200, { 'content-type': 'text/html' });
             res.write(html);
             res.end();
+        } else if (req.method === 'POST') {
+            await shelterCat(catId);
+            res.writeHead(302, { 'Location': '/' })
+            res.end();
         }
     }
 });
@@ -140,7 +144,7 @@ async function getAllBreeds() {
 async function addBreed(breed) {
     const breeds = await getAllBreeds();
     breeds.push(breed);
-    await fs.writeFile('./src/dbBreeds.json', JSON.stringify(breeds), 'utf8');
+    await fs.writeFile('./src/dbBreeds.json', JSON.stringify(breeds, null, 2), 'utf8');
 }
 
 async function getAllCats() {
@@ -178,6 +182,14 @@ async function shelterCatView(cat) {
     html = html.replace('{{breed}}', cat.breed);
 
     return html;
+}
+
+async function shelterCat(catId) {
+    const cats = await getAllCats();
+
+    const updatedCats = cats.filter(cat => cat.id !== catId);
+    await fs.writeFile('./src/dbCats.json', JSON.stringify(updatedCats, null, 2), 'utf8');
+
 }
 
 async function updateCats(updatedCat, catId) {
