@@ -1,35 +1,44 @@
 [
-    {
-    "id":"ec49ea94-2451-47bb-8a6d-bf0f1e3b33b6",
-    "name": "Lion",
+  {
+    "id": "bf18a9fa-d5f8-471e-9788-3ab15c3d2993",
+    "name": "Lioness",
     "description": "Living in the grasslands, scrub, and open woodlands of sub-Saharan Africa, the lion is the second largest cat in the world. It is dwarfed slightly by the tiger, which is closely related and has a very similar body typeUnlike other cats, lions are very social animals.",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cachorro_de_Gato_FoldEx_%28%22Belisario_del_Laberinto%22%29.JPG/250px-Cachorro_de_Gato_FoldEx_%28%22Belisario_del_Laberinto%22%29.JPG",
-    "breed": "Foldex"
-    },
-    {
-    "id":"41f3a88a-9cac-4f84-82a9-50971dc41c2b",
-    "name" : "Monkey",
+    "breed": "Fluffy Cat"
+  },
+  {
+    "id": "cfab1ef6-fdf6-4d5a-9473-8371cc3e3448",
+    "name": "Monkey",
     "description": "There are currently 264 known monkey species.Monkeys can be divided into two groups, Old World monkeys that live in Africa and Asia, and New World monkeys that live in South America.A baboon is an example of an Old World monkey, while a marmoset is an example of a New World monkey.",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Abbaye_fev2006_003.jpg/250px-Abbaye_fev2006_003.jpg",
-    "breed": "Chartreux"
-    },{
-    "id":"5fe4bf32-75b5-45a6-9f06-5a0797beb48d",
-    "name" :"Owl",
-    "description":"There are around 200 different owl species.Owls are active at night (nocturnal).A group of owls is called a parliament.Most owls hunt insects, small mammals and other birds.Some owl species hunt fish.Owls have powerful talons (claws) which help them catch and kill prey.",
+    "breed": "Bengal Cat"
+  },
+  {
+    "id": "5fe4bf32-75b5-45a6-9f06-5a0797beb48d",
+    "name": "Owl",
+    "description": "There are around 200 different owl species.Owls are active at night (nocturnal).A group of owls is called a parliament.Most owls hunt insects, small mammals and other birds.Some owl species hunt fish.Owls have powerful talons (claws) which help them catch and kill prey.",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/BrownVarientAsianCat.JPG/250px-BrownVarientAsianCat.JPG",
-    "breed":"Asian"
-    
-    },{
-    "id":"36ed02b5-f479-4859-a340-6f1acc8991bc",
-    "name" :"Peacock",
-    "description":"Peacocks are large, colorful pheasants (typically blue and green) known for their iridescent tails. These tail feathers, or coverts, spread out in a distinctive train that is more than 60 percent of the bird’s total body length and boast colorful eye markings of blue, gold, red, and other hues. The large train is used in mating rituals and courtship displays. ",
+    "breed": "Bombay Cat"
+  },
+  {
+    "id": "36ed02b5-f479-4859-a340-6f1acc8991bc",
+    "name": "Peacock",
+    "description": "Peacocks are large, colorful pheasants (typically blue and green) known for their iridescent tails. These tail feathers, or coverts, spread out in a distinctive train that is more than 60 percent of the bird’s total body length and boast colorful eye markings of blue, gold, red, and other hues. The large train is used in mating rituals and courtship displays. ",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Aegean_cat.jpg/250px-Aegean_cat.jpg",
-    "breed":"Aegean"
-    },{
-    "id":"50627343a-d0d4-4c90-abe0-ce392b207806",
-    "name" :"Pigeon",
-    "description":"Most of our domesticated pigeons have a common ancestor, the Rock Dove pigeon.Racing Homing Pigeons have been clocked flying 92.5 mph average speed on a 400 mile race.Homing Pigeons have been known to fly 700 miles in a day.Pigeons have flown in many wars, including both WWI & WWII.",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BurMau_Vega_Star%2C_champagne_burmese_kitten.jpg/250px-BurMau_Vega_Star%2C_champagne_burmese_kitten.jpg",
-    "breed":"Bombay Cat"
-    }
+    "breed": "Aegean"
+  },
+  {
+    "id": "c481254e-6eb4-42b5-ae43-3ffccd799329",
+    "name": "Bombai",
+    "description": "Cats are wonderful companions for individuals of any age or families with children. ",
+    "imageUrl": "http://www.discoveranimals.org/uploads/general/shutterstock_149489132_751x530.jpg",
+    "breed": "Asian"
+  },
+  {
+    "id": "11fbd683-70e5-428d-a826-f9f82bf72f6f",
+    "name": "Bengy",
+    "description": "The domestic cat is usually a small furry animal with attitude, 4 legs, sharp claws, teeth and usually a tail.",
+    "imageUrl": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg",
+    "breed": "Foldex"
+  }
 ]
