@@ -76,12 +76,10 @@ const server = http.createServer(async (req, res) => {
             req.on('end', (async () => {
                 const formData = new URLSearchParams(body);
                 const breedName = formData.get('breed');
-
                 if (breedName) {
                     await addBreed(breedName);
                 }
-
-                res.writeHead(302, { 'Location': '/' })
+                res.writeHead(302, { 'Location': '/' });
                 res.end();
             }))
         }
@@ -91,11 +89,29 @@ const server = http.createServer(async (req, res) => {
         const catId = req.url.split('/')[3];
         const cat = await getCat(catId);
 
-        const html = await editCatView(cat);
-        res.writeHead(200, { 'content-type': 'text/html' })
-        res.write(html);
-        res.end();
+        if (req.method === "GET") {
+            const html = await editCatView(cat);
+            res.writeHead(200, { 'content-type': 'text/html' })
+            res.write(html);
+            res.end();
 
+        } else if (req.method === "POST") {
+            let body = '';
+            req.on('data', (chunk) => {
+                body += chunk.toString();
+            });
+
+            req.on('end', async () => {
+                const formData = new URLSearchParams(body);
+                const updatedCat = Object.fromEntries(formData);
+                console.log(updateCats);
+                const cats = await updateCats(updatedCat, catId);
+                await fs.writeFile('./src/dbCats.json', JSON.stringify(cats, null, 2), 'utf8');
+
+                res.writeHead(302, { 'Location': '/' });
+                res.end();
+            })
+        }
     }
 });
 
@@ -132,7 +148,6 @@ async function editCatView(cat) {
         `<option value="${breed}">${breed}</option>`
     ).join('\n');
 
-
     let html = await fs.readFile('./src/views/editCat.html', 'utf8');
     html = html.replace('{{name}}', cat.name);
     html = html.replace('{{description}}', cat.description);
@@ -141,6 +156,12 @@ async function editCatView(cat) {
     html = html.replace('{{breeds}}', breedsTemplate);
 
     return html;
+}
+
+async function updateCats(updatedCat, catId) {
+    let cats = await getAllCats();
+    cats = cats.map(cat => cat.id === catId ? { ...updatedCat } : cat);
+    return cats;
 }
 
 async function displayAllCats(cats) {
