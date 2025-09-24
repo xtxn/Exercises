@@ -6,8 +6,7 @@ async function getAllMovies() {
 
 async function createMovie(movieData) {
     const movie = new Movie(movieData);
-    movie.save();
-
+    await movie.save();
 }
 
 export default {
