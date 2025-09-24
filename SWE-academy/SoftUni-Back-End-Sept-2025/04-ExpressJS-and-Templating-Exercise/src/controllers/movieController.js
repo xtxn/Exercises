@@ -20,3 +20,8 @@ movieController.get('/:movieId/details', async (req, res) => {
 
     res.render('details', movie);
 });
+
+movieController.get('/search', async (req, res) => {
+
+    res.render('search')
+})
