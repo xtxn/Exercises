@@ -9,7 +9,12 @@ async function createMovie(movieData) {
     await movie.save();
 }
 
+async function getOneMovie(movieId) {
+    return await Movie.findOne(movieId);
+}
+
 export default {
     getAllMovies,
     createMovie,
+    getOneMovie,
 }
