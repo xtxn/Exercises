@@ -12,4 +12,10 @@ movieController.post('/create', async (req, res) => {
     addedMovie.rating = parseInt(addedMovie.rating);
     await movieService.createMovie(addedMovie);
     res.redirect('/')
-})
+});
+
+movieController.get('/:movieId/details', (req, res) => {
+    const movieId = req.params.movieId
+
+    res.render('details');
+});
