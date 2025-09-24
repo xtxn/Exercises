@@ -43,6 +43,17 @@
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjcy-Q6F8E2JDeZzgHYaOWqMfbZeZzgUQS8A&s",
       "rating": 6.4,
       "description": "An investigative journalist and self-proclaimed atheist sets out to disprove the existence of God after his wife becomes a Christian."
+    },
+    {
+      "title": "Boys",
+      "category": "tv-show",
+      "genre": "Dark Comedy",
+      "director": " Eric Kripke",
+      "year": "2019",
+      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRL50utiWbI0ksHQP6seHLvXDVukJSwXCQ-z2LMoFUT6b3F19-z",
+      "rating": 8.6,
+      "description": "Reviewers say 'The Boys' is lauded for its fresh superhero narrative, merging dark humor, thrilling action, and social critique. It delves into corporate greed, power corruption, and moral complexities. Karl Urban and Antony Starr deliver standout performances. Yet, some criticize its shock tactics, graphic violence, and political undertones, especially in later seasons. A segment of the audience feels the show has strayed from its original appeal, becoming more intricate and less captivating.",
+      "_id": "c25e0bd8-bbe6-4393-a0de-4fd595857922"
     }
   ]
 }
