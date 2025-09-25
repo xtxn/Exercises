@@ -2,7 +2,7 @@
 
 SoftUni JS Back-End Course Workshop
 
-## Develpment Setup
+## Development Setup
 
 ### Setup
 
@@ -15,12 +15,47 @@ SoftUni JS Back-End Course Workshop
 - [x] Render Home Page
 - [x] Add Layout
 - [x] Render About Page
+- [x] Add 404 page
 
-### Architecture
+### Architecture and dynamic rendering
 
 - [x] Add home controller
-- [ ] Add movie data layer
-- [ ] Add movie service
-- [ ] Render movies on home page
-- [ ] Show no movies screen
-- [ ] Add routes
+- [x] Add movie data layer
+- [x] Add movie service
+- [x] Render movies on home page
+- [x] Show no movies screen
+
+### Create movie
+
+- [x] Add movie Controller
+- [x] Show create movie page
+- [x] Add routes
+- [x] Read body data - parse data from user input
+- [ ] Create movie
+  - [x] Add action
+  - [x] Add service
+  - [x] Add model method for creating movie
+- [x] Redirect after creation
+- [x] Add unique id for each movie
+
+### Details
+
+- [x] Add navigation button for details
+- [x] Add route with param for details page
+- [x] Get one movie from service
+- [x] Find movie by id from model
+- [x] Render details page with dynamic data
+
+### Search
+
+- [x] Show static search page
+- [x] Render all movies
+- [x] Modify search form
+- [x] Filter movies
+- [x] Remember search words
+
+### Bonuses
+
+- [x] Dynamic page title
+- [x] File Persistence
+- [x] Rating
