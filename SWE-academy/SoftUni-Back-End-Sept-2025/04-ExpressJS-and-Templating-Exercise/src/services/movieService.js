@@ -1,7 +1,7 @@
 import Movie from "../models/Movie.js";
 
-async function getAllMovies() {
-    return await Movie.find();
+async function getAllMovies(filter) {
+    return await Movie.find(filter);
 };
 
 async function createMovie(movieData) {
