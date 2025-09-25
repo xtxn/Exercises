@@ -17,8 +17,9 @@ movieController.post('/create', async (req, res) => {
 movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneMovie(movieId);
+    const startCount = '&#x2605;'.repeat(Math.floor(movie.rating));
 
-    res.render('details', { ...movie, pageTitle: "Movie Details" });
+    res.render('details', { ...movie, pageTitle: "Movie Details", rating: startCount });
 });
 
 movieController.get('/search', async (req, res) => {
