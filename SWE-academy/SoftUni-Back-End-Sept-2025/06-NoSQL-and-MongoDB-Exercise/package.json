@@ -1,5 +1,5 @@
 {
-  "name": "04-expressjs-and-templating-exercise",
+  "name": "06-NoSQL-and-MongoDB-Exercise",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.2",
+    "mongoose": "^8.18.2",
     "uuid": "^13.0.0"
   }
 }
