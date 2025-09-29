@@ -1,14 +1,26 @@
 import Movie from "../models/Movie.js";
 
-async function getAllMovies(filter) {
-    const result = await Movie.find(filter).lean();
-    // const result = await Movie.find(filter)
-    return result;
+async function getAllMovies(filter = {}) {
+    let query = Movie.find();
+
+    if (filter.title) {
+
+        query = query.find({ title: { $regex: filter.title, $options: 'i' } });
+    }
+
+    if (filter.genre) {
+
+        query = query.find({ genre: { $regex: new RegExp(`^${filter.genre}$`), $options: 'i' } })
+    }
+
+    if (filter.year) {
+        query = query.where('year').equals(filter.year);
+    }
+
+    return await query.lean();
 };
 
 async function createMovie(movieData) {
-    // const movie = new Movie(movieData);
-    // await movie.save();
 
     return await Movie.create(movieData)
 }
