@@ -3,22 +3,22 @@ import { Schema, model } from 'mongoose';
 const castSchema = new Schema({
     name: {
         type: String,
-        require: true,
+        required: true,
     },
     age: {
         type: Number,
-        require: true,
+        required: true,
         min: 0,
         max: 120,
     },
     born: {
         type: String,
-        require: true,
+        required: true,
     },
     imageUrl: {
         type: String,
-        require: true,
-    }
+        required: true,
+    },
 });
 
 const Cast = model('Cast', castSchema);
