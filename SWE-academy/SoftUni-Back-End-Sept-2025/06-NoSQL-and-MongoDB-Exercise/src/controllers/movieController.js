@@ -19,8 +19,9 @@ movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneMovie(movieId);
     const startCount = '&#x2605;'.repeat(Math.floor(movie.rating));
+    const movieCasts = await castService.getAllCast({ includes: movie.casts });
 
-    res.render('details', { ...movie, pageTitle: "Movie Details", rating: startCount });
+    res.render('details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
 });
 
 movieController.get('/search', async (req, res) => {

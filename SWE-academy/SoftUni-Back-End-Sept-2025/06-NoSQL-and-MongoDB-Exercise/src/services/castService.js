@@ -4,8 +4,10 @@ function create(castData) {
     return Cast.create(castData);
 }
 
-async function getAllCast() {
-    return await Cast.find();
+function getAllCast(filter = {}) {
+    let query = Cast.find()
+    filter.includes ? query = query.in('_id', filter.includes) : query = [];
+    return query;
 }
 
 export default {
