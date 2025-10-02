@@ -33,6 +33,6 @@ movieController.get('/search', async (req, res) => {
 movieController.get('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneMovie(movieId);
-
-    res.render('casts/attach', { movie });
+    const casts = await castService.getAllCast();
+    res.render('casts/attach', { movie, casts });
 })
