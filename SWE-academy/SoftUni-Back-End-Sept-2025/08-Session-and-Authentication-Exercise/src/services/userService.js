@@ -4,4 +4,6 @@ function register(userData) {
     return User.create(userData);
 }
 
-export default register;
+export default {
+    register,
+};
