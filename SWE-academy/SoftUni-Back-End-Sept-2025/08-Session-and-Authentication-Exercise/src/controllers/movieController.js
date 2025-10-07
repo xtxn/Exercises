@@ -19,7 +19,11 @@ movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneMovie(movieId);
     const startCount = '&#x2605;'.repeat(Math.floor(movie.rating));
-    const movieCasts = await castService.getAllCast({ includes: movie.casts });
+    let movieCasts = [];
+
+    if (movie.casts && movie.casts.length > 0) {
+        movieCasts = await castService.getAllCast({ includes: movie.casts });
+    }
 
     res.render('details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
 });
@@ -34,13 +38,14 @@ movieController.get('/search', async (req, res) => {
 movieController.get('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOneMovie(movieId);
-    const casts = await castService.getAllCast();
+    const casts = await castService.getAllCast({ excludes: movie.casts });
+
     res.render('casts/attach', { movie, casts });
 })
 
 movieController.post('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
     const castId = req.body.cast;
-    movieService.attach(movieId, castId);
+    await movieService.attach(movieId, castId);
     res.redirect(`/movies/${movieId}/details`)
 })
