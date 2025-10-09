@@ -6,7 +6,7 @@ import { isAuth } from "../middlewares/authMiddleware.js";
 export const movieController = Router();
 
 movieController.get('/create', isAuth, (req, res) => {
-    res.render('create', { pageTitle: "Create Movie" });
+    res.render('movies/create', { pageTitle: "Create Movie" });
 });
 
 movieController.post('/create', async (req, res) => {
@@ -26,7 +26,7 @@ movieController.get('/:movieId/details', async (req, res) => {
         movieCasts = await castService.getAllCast({ includes: movie.casts });
     }
 
-    res.render('details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
+    res.render('movies/details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
 });
 
 movieController.get('/search', async (req, res) => {
