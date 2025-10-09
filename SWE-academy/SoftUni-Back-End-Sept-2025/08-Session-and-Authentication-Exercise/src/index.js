@@ -1,8 +1,10 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 
 import { routes } from './routes.js';
+import { authMiddleware } from './middlewares/authMiddleware.js';
 
 const app = express();
 const port = 3000;
@@ -33,6 +35,9 @@ app.set('views', 'src/views');
 // Setup middlewares
 app.use(express.static('src/public'));
 app.use(express.urlencoded()); // Formdata parser from /create
+app.use(cookieParser());
+
+app.use(authMiddleware)
 
 // Routes
 app.use(routes)

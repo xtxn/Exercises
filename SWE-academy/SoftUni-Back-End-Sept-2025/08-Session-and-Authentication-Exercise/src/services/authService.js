@@ -2,8 +2,9 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 import User from "../models/User.js";
+import { JWT_SECRET } from '../config/constants.js';
 
-const JWT_SECRET = '-8q4hsdaasrasdfg2325sadf898lgasdg';
+
 
 function register(userData) {
     return User.create(userData);
