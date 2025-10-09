@@ -20,9 +20,12 @@ async function getAllMovies(filter = {}) {
     return await query.lean();
 };
 
-async function createMovie(movieData) {
+async function createMovie(movieData, userId) {
 
-    return await Movie.create(movieData)
+    return await Movie.create({
+        ...movieData,
+        creator: userId,
+    });
 }
 
 async function getOneMovie(movieId) {

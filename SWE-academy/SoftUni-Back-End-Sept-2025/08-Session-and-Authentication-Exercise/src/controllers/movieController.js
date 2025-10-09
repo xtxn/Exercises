@@ -12,7 +12,8 @@ movieController.get('/create', isAuth, (req, res) => {
 movieController.post('/create', async (req, res) => {
     const addedMovie = req.body;
     addedMovie.rating = parseInt(addedMovie.rating);
-    await movieService.createMovie(addedMovie);
+    const userId = req.user.id;
+    await movieService.createMovie(addedMovie, userId);
     res.redirect('/')
 });
 
@@ -25,6 +26,8 @@ movieController.get('/:movieId/details', async (req, res) => {
     if (movie.casts && movie.casts.length > 0) {
         movieCasts = await castService.getAllCast({ includes: movie.casts });
     }
+
+    // const isCreator = 
 
     res.render('movies/details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
 });
