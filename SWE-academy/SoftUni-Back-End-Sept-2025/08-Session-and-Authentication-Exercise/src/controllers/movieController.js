@@ -27,9 +27,9 @@ movieController.get('/:movieId/details', async (req, res) => {
         movieCasts = await castService.getAllCast({ includes: movie.casts });
     }
 
-    // const isCreator = 
+    const isCreator = req.user?.id && movie.creator == req.user.id;
 
-    res.render('movies/details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts });
+    res.render('movies/details', { ...movie, pageTitle: "Movie Details", rating: startCount, casts: movieCasts, isCreator });
 });
 
 movieController.get('/search', async (req, res) => {

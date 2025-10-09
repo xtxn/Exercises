@@ -21,9 +21,11 @@
                 <p class="disc">{{description}}</p>
                 <p class="card-category">Category: {{category}}</p>
 
+                {{#if isCreator}}
                 <a href="/movies/{{_id}}/attach" class="details">Attach cast</a>
                 <a href="/movies/{{_id}}/edit" class="details">Edit</a>
                 <a href="/movies/{{_id}}/delete" class="details">Delete</a>
+                {{/if}}
             </div>
         </div>
         <div class="card_right">
