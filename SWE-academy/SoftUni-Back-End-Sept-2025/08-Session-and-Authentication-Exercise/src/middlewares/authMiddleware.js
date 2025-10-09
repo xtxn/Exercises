@@ -11,8 +11,14 @@ export function authMiddleware(req, res, next) {
 
     try {
         const decodedToken = jwt.verify(token, JWT_SECRET);
+
+        //Attach authenticated user to request
         req.user = decodedToken;
         req.isAuthenticated = true;
+
+        // Add to handlebars context
+        res.locals.isAuthenticated = true;
+        res.locals.user = decodedToken;
 
         next();
     } catch (error) {
