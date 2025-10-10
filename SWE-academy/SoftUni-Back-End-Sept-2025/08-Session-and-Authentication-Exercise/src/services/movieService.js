@@ -40,9 +40,14 @@ async function attach(movieId, castId) {
     }
 }
 
+async function del(movieId) {
+    return Movie.findByIdAndDelete(movieId);
+}
+
 export default {
     getAllMovies,
     createMovie,
     getOneMovie,
     attach,
+    del,
 }

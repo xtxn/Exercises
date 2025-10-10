@@ -45,11 +45,19 @@ movieController.get('/:movieId/attach', async (req, res) => {
     const casts = await castService.getAllCast({ excludes: movie.casts });
 
     res.render('casts/attach', { movie, casts });
-})
+});
 
 movieController.post('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
     const castId = req.body.cast;
     await movieService.attach(movieId, castId);
     res.redirect(`/movies/${movieId}/details`)
-})
+});
+
+movieController.get('/:movieId/delete', isAuth, (req, res) => {
+    const movieId = req.params.movieId;
+
+    movieService.del(movieId);
+    res.redirect('/');
+});
+
