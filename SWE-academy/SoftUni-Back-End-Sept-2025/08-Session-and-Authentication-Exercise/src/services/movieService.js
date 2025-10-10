@@ -44,10 +44,15 @@ async function del(movieId) {
     return Movie.findByIdAndDelete(movieId);
 }
 
+async function edit(movieId, movieData) {
+    return Movie.findByIdAndUpdate(movieId, movieData);
+}
+
 export default {
     getAllMovies,
     createMovie,
     getOneMovie,
     attach,
     del,
+    edit,
 }
