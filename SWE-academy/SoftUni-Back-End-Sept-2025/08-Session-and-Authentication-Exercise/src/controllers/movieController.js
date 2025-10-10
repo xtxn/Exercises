@@ -66,3 +66,9 @@ movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     res.redirect('/');
 });
 
+movieController.get("/:movieId/edit", async (req, res) => {
+    const movieId = req.params.movieId;
+
+    res.render("movies/edit");
+})
+
