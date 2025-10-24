@@ -61,14 +61,14 @@
 
 ### 6. Login
 
-- [ ] Fix login navigation link
-- [ ] Add login view
-- [ ] Crete get login action
-- [ ] Fix login form
-- [ ] Add post login action
-- [ ] Add login method in userService
-- [ ] Validate if user exists
-- [ ] Validate password
+- [x] Fix login navigation link
+- [x] Add login view
+- [x] Crete get login action
+- [x] Fix login form
+- [x] Add post login action
+- [x] Add login method in userService
+- [x] Validate if user exists
+- [x] Validate password
 - [ ] Install jsonwebtoken
 - [ ] Generate token
 - [ ] Call userService from userController
