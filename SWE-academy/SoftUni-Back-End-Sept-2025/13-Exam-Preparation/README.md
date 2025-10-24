@@ -29,9 +29,9 @@
 - [x] Config handlebars file extension
 - [x] Use handlebars engine
 - [x] Set views folder
-- [ ] Add home view /home controller/
-- [ ] Render home view without layout `{layout: false}`
-- [ ] Fix assets paths in html/hbs
+- [x] Add home view /in home controller/
+- [x] Render home view without layout `{layout: false}`
+- [x] Fix assets paths in html/hbs
 - [ ] Add layout /remove from html/hbs/ and remove `{layout: false}`
 - [ ] Add partials dir
 - [ ] Config handlebars to work with mongoose documents `omit lean()`
