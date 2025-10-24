@@ -93,10 +93,10 @@
 
 ### 9. Authorization
 
-- [ ] Create isAuth middleware
-- [ ] Create isGuest middleware
-- [ ] Add route guards
-- [ ] Add not found page
+- [x] Create isAuth middleware
+- [x] Create isGuest middleware
+- [x] Add route guards /in userController/
+- [x] Add not found page
 
 ### 10. Dynamic content
 

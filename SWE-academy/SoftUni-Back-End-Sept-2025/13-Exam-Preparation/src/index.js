@@ -41,7 +41,7 @@ app.use(cookieParser())
 app.use(express.urlencoded());
 
 // Use auth middleware
-app.use(authMiddleware);
+app.use(authMiddleware)
 
 // Add routes
 app.use(routes)

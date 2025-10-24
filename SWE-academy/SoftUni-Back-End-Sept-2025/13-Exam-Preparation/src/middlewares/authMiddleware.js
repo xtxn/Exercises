@@ -20,3 +20,19 @@ export function authMiddleware(req, res, next) {
         res.redirect('/users/login');
     }
 }
+
+export function isAuth(req, res, next) {
+    if (!req.isAuthenticated) {
+        return res.redirect('/users/login');
+    }
+
+    next();
+}
+
+export function isGuest(req, res, next) {
+    if (req.isAuthenticated) {
+        return res.redirect('/');
+    }
+
+    next();
+}
