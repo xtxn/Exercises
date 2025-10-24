@@ -20,7 +20,7 @@
 - [ ] Add JSON parser `optional`
 - [x] Add routes file
 - [x] Add home controller
-- [ ] Add error controller `404 Page`
+- [x] Add error controller `404 Page`
 
 ### 3. Handlebars
 
