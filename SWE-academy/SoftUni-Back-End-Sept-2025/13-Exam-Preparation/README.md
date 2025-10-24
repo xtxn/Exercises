@@ -34,19 +34,18 @@
 - [x] Fix assets paths in html/hbs
 - [x] Add layout /remove from html/hbs/ and remove `{layout: false}`
 - [x] Add partials dir
-- [ ] Config handlebars to work with mongoose documents `omit lean()`
-  - [ ] `runtimeOptions : { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+- [x] Config handlebars to work with mongoose documents `omit lean()`
+  - [x] `runtimeOptions : { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
 
 ### 4. Database
 
-- [ ] Install mongoose
-- [ ] Connect to db
-- [ ] Add Error handling on connect
-- [ ] Add simple user model
+- [x] Install mongoose
+- [x] Connect to db
+- [x] Add Error handling on connect
+- [x] Add simple user model
 
 ### 5. Register
 
-- [ ] Fix navigation links in layout
 - [ ] Add user controller
 - [ ] Add user controller to routes
 - [ ] Create register view
