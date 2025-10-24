@@ -24,11 +24,11 @@
 
 ### 3. Handlebars
 
-- [ ] Install handlebars `express-handlebars`
-- [ ] Config handlebars engine
-- [ ] Use handlebars engine
-- [ ] Config handlebars file extension
-- [ ] Set views folder
+- [x] Install handlebars `express-handlebars`
+- [x] Config handlebars engine
+- [x] Config handlebars file extension
+- [x] Use handlebars engine
+- [x] Set views folder
 - [ ] Add home view /home controller/
 - [ ] Render home view without layout `{layout: false}`
 - [ ] Fix assets paths in html/hbs
