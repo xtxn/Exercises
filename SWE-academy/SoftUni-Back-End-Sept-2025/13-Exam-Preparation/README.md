@@ -18,8 +18,8 @@
 - [x] Setup static middleware
 - [x] Add body parser `form parser - urlencoded({extended: false})`
 - [ ] Add JSON parser `optional`
-- [ ] Add route file
-- [ ] Add home controller
+- [x] Add routes file
+- [x] Add home controller
 - [ ] Add error controller `404 Page`
 
 ### 3. Handlebars
