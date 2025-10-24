@@ -9,6 +9,6 @@ homeController.get('/', (req, res) => {
 homeController.post('/', (req, res) => {
     console.log(req.body);
     res.end();
-})
+});
 
 export default homeController;

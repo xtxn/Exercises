@@ -79,8 +79,8 @@
 
 ### 7. Logout
 
-- [ ] Add logout navigation link
-- [ ] Add logout action
+- [x] Add logout navigation link
+- [x] Add logout action
 
 ### 8. Authentication
 
