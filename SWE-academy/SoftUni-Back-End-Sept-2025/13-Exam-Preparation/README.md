@@ -32,8 +32,8 @@
 - [x] Add home view /in home controller/
 - [x] Render home view without layout `{layout: false}`
 - [x] Fix assets paths in html/hbs
-- [ ] Add layout /remove from html/hbs/ and remove `{layout: false}`
-- [ ] Add partials dir
+- [x] Add layout /remove from html/hbs/ and remove `{layout: false}`
+- [x] Add partials dir
 - [ ] Config handlebars to work with mongoose documents `omit lean()`
   - [ ] `runtimeOptions : { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
 
