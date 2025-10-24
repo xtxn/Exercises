@@ -46,10 +46,11 @@
 
 ### 5. Register
 
-- [ ] Add user controller
-- [ ] Add user controller to routes
-- [ ] Create register view
-- [ ] Render register view
+- [x] Fix navigation links
+- [x] Add user controller
+- [x] Add user controller to routes
+- [x] Create register view
+- [x] Render register view
 - [ ] Modify register form
 - [ ] Create post route for register
 - [ ] Create user service
