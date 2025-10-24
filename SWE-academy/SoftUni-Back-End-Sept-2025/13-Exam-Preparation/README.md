@@ -51,10 +51,10 @@
 - [x] Add user controller to routes
 - [x] Create register view
 - [x] Render register view
-- [ ] Modify register form
-- [ ] Create post route for register
-- [ ] Create user service
-- [ ] Redirect after successful register
+- [x] Modify register form
+- [x] Create post route for register
+- [x] Create user service
+- [x] Redirect after successful register
 - [ ] Install bcrypt
 - [ ] Hash password before save
 - [ ] BONUS: Check if user exists
