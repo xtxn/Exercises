@@ -108,13 +108,13 @@
 ### 11. Error handling and Validation
 
 - [x] Add error message in notification
-- [ ] Notification conditional rendering
-- [ ] Create getErrorMessage util function
-- [ ] Add error handling for register
-- [ ] Add register form data persistence
-- [ ] Check repeat password
+- [x] Notification conditional rendering
+- [x] Create getErrorMessage util function
+- [x] Add error handling for register
+- [x] Add register form data persistence
+- [x] Check repeat password
 - [ ] BONUS: Check repeatPassword in model
-- [ ] Error handling and data persistence on login
+- [x] Error handling and data persistence on login
 
 ### Bonus
 

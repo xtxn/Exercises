@@ -2,11 +2,15 @@ import User from "../models/User.js";
 import bcrypt from 'bcrypt';
 import { generateAuthToken } from "../utils/tokenUtils.js";
 
-async function register(email, password) {
+async function register(email, password, repeatPass) {
     const user = await User.findOne({ email })
 
     if (user) {
         throw new Error('Email already exists')
+    }
+
+    if (password !== repeatPass) {
+        throw new Error('Password mismatch')
     }
 
     const createdUser = await User.create({ email, password });
