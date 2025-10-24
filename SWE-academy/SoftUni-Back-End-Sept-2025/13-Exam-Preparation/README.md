@@ -15,7 +15,7 @@
 
 - [x] Install express
 - [x] Init express server
-- [ ] Setup static middleware
+- [x] Setup static middleware
 - [ ] Add body parser `form parser`
 - [ ] Add JSON parser `optional`
 - [ ] Add route file
