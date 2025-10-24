@@ -84,12 +84,12 @@
 
 ### 8. Authentication
 
-- [ ] Install and use cookie-parser
-- [ ] Create auth middleware
-  - [ ] Allow if guest (no token)
-  - [ ] Verify token (clear session if invalid)
-  - [ ] Attach decoded token to req.user (of token)
-- [ ] Use auth middleware
+- [x] Install and use cookie-parser
+- [x] Create auth middleware
+  - [x] Allow if guest (no token)
+  - [x] Verify token (clear session if invalid)
+  - [x] Attach decoded token to req.user (of token)
+- [x] Use auth middleware
 
 ### 9. Authorization
 
