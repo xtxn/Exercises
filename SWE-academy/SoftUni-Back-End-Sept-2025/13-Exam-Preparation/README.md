@@ -9,12 +9,12 @@
 - [x] Add start file `/src/index.js`
 - [x] Add dev script
 - [x] Config debugger
-- [ ] Add resources
+- [x] Add resources
 
 ### 2. Express
 
-- [ ] Install express
-- [ ] Init express server
+- [x] Install express
+- [x] Init express server
 - [ ] Setup static middleware
 - [ ] Add body parser `form parser`
 - [ ] Add JSON parser `optional`

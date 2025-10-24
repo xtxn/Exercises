@@ -4,10 +4,13 @@
   "description": "Friendly World",
   "main": "src/index.js",
   "scripts": {
-    "dev":"node --watch ./src/index.js"
+    "dev": "node --watch ./src/index.js"
   },
   "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
