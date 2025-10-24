@@ -69,13 +69,13 @@
 - [x] Add login method in userService
 - [x] Validate if user exists
 - [x] Validate password
-- [ ] Install jsonwebtoken
-- [ ] Generate token
-- [ ] Call userService from userController
-- [ ] Send token as cookie
-- [ ] Redirect to homepage
-- [ ] BONUS: Extract jwt secret to constant or env
-- [ ] Auto login on register
+- [x] Install jsonwebtoken
+- [x] Generate token
+- [x] Call userService from userController
+- [x] Send token as cookie
+- [x] Redirect to homepage
+- [x] BONUS: Extract jwt secret to constant or env
+- [x] Auto login on register
 
 ### 7. Logout
 

@@ -1,5 +1,6 @@
 import User from "../models/User.js";
 import bcrypt from 'bcrypt';
+import { generateAuthToken } from "../utils/tokenUtils.js";
 
 async function register(email, password) {
     const user = await User.findOne({ email })
@@ -8,7 +9,9 @@ async function register(email, password) {
         throw new Error('Email already exists')
     }
 
-    return User.create({ email, password });
+    const createdUser = await User.create({ email, password });
+
+    return generateAuthToken(createdUser)
 }
 
 async function login(email, password) {
@@ -23,6 +26,8 @@ async function login(email, password) {
     if (!isValid) {
         throw new Error('Invalid email or password');
     }
+
+    return generateAuthToken(user);
 }
 
 export default {
