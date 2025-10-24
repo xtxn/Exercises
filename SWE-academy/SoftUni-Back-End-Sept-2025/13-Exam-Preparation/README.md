@@ -16,7 +16,7 @@
 - [x] Install express
 - [x] Init express server
 - [x] Setup static middleware
-- [ ] Add body parser `form parser`
+- [x] Add body parser `form parser - urlencoded({extended: false})`
 - [ ] Add JSON parser `optional`
 - [ ] Add route file
 - [ ] Add home controller
