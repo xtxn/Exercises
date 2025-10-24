@@ -55,9 +55,9 @@
 - [x] Create post route for register
 - [x] Create user service
 - [x] Redirect after successful register
-- [ ] Install bcrypt
-- [ ] Hash password before save
-- [ ] BONUS: Check if user exists
+- [x] Install bcrypt
+- [x] Hash password before save
+- [x] BONUS: Check if user exists
 
 ### 6. Login
 
