@@ -100,14 +100,14 @@
 
 ### 10. Dynamic content
 
-- [ ] Add use data to handlebars context
-- [ ] Dynamic navigation
-- [ ] Dynamic page titles
+- [x] Add use data to handlebars context
+- [x] Dynamic navigation
+- [x] Dynamic page titles
 - [ ] BONUS: Set page title from view
 
 ### 11. Error handling and Validation
 
-- [ ] Add error message in notification
+- [x] Add error message in notification
 - [ ] Notification conditional rendering
 - [ ] Create getErrorMessage util function
 - [ ] Add error handling for register
