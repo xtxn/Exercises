@@ -22,7 +22,6 @@ userController.post('/register', isGuest, async (req, res) => {
             user: { username, email },
         });
     }
-
 });
 
 userController.get('/login', isGuest, (req, res) => {

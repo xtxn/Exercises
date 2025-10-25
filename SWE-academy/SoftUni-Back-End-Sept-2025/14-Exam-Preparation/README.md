@@ -127,43 +127,43 @@
 
 ## Steps to Use the Skeleton Project
 
-- [ ] Install dependencies `npm i`
-- [ ] Remove old resources and add new resources `/src/public`
-- [ ] Add html files to the views folder
-- [ ] Rename database name
-- [ ] Replace layout
-  - [ ] Dynamic title
-  - [ ] Fix resource routes
-  - [ ] Error notification
-  - [ ] Body
-  - [ ] Dynamic Navigation
-- [ ] Replace home page
-- [ ] Modify navigation links
-- [ ] Modify User model
-- [ ] Modify login and register controller
-- [ ] Modify login and register service
-- [ ] Modify token generation
-- [ ] Modify login and register error handlers
-- [ ] Replace login page
-- [ ] Replace register page
-- [ ] Replace 404 page
+- [x] Install dependencies `npm i`
+- [x] Remove old resources and add new resources `/src/public`
+- [x] Add html files to the views folder
+- [x] Rename database name
+- [x] Replace layout
+  - [x] Dynamic title
+  - [x] Fix resource routes
+  - [x] Error notification
+  - [x] Body
+  - [x] Dynamic Navigation
+- [x] Replace home page
+- [x] Modify navigation links
+- [x] Modify User model
+- [x] Modify login and register controller
+- [x] Modify login and register service
+- [x] Modify token generation
+- [x] Modify login and register error handlers
+- [x] Replace login page
+- [x] Replace register page
+- [x] Replace 404 page
 
 ## Solve Mind Blog Exam Prep
 
 ### Create Blog Page
 
-- [ ] Fix create blog navigation link
-- [ ] Add blog controller
-- [ ] Add controller to routes
-- [ ] Add create action with render
-- [ ] Add blogs folder in views
-- [ ] Add create blog view
-- [ ] Add blog model
-- [ ] Modify create blog form
-- [ ] Create blog post action
-- [ ] Create blog service with create method
-- [ ] Add owner on blog creation
-- [ ] Add error handling
+- [x] Fix create blog navigation link
+- [x] Add blog controller
+- [x] Add controller to routes
+- [x] Add create action with render
+- [x] Add blogs folder in views
+- [x] Add create blog view
+- [x] Add blog model
+- [x] Modify create blog form
+- [x] Create blog post action
+- [x] Create blog service with create method
+- [x] Add owner on blog creation
+- [x] Add error handling
 
 ### Blogs Catalog Page
 
@@ -171,12 +171,12 @@
 - [] Add catalog view
 - [] Add get catalog action with static blogs
 - [] Get all blogs service
-- [] Show dynamic blogs 
+- [] Show dynamic blogs
 
 ### Home page blogs
 
 - [ ] Add get latest blogs in blog service
-- [ ] Show dynamic lastest blogs on home
+- [ ] Show dynamic latest blogs on home
 
 ### Blog details
 
@@ -189,12 +189,12 @@
 - [ ] Hide buttons if not logged
 - [ ] Show edit and delete button if author
 - [ ] Show follow and already following buttons if logged
-- [ ] Implement follow functionallity
+- [ ] Implement follow functionality
   - [ ] Add followers in blog relation
   - [ ] Add follow action
   - [ ] Add follow service method
   - [ ] Fix follow link
-- [ ] Show dynamic follwers
+- [ ] Show dynamic followers
 - [ ] Show follow button or already following buttons conditionally
 
 ### Delete blog
