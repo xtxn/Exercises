@@ -180,11 +180,11 @@
 
 ### Blog details
 
-- [ ] Fix details link in blogs page
-- [ ] Fix details link in home page
-- [ ] Show static details page
-- [ ] Add getOne method in blog service
-- [ ] Show dynamic details page (without author and followers)
+- [x] Fix details link in blogs page
+- [x] Fix details link in home page
+- [x] Show static details page
+- [x] Add getOne method in blog service
+- [x] Show dynamic details page (without author and followers)
 - [ ] Show dynamic author
 - [ ] Hide buttons if not logged
 - [ ] Show edit and delete button if author

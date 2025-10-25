@@ -1,5 +1,9 @@
 import Blog from '../models/Blog.js'
 
+function getOne(blogId) {
+    return Blog.findById(blogId);
+}
+
 function getAll() {
     return Blog.find();
 }
@@ -21,4 +25,5 @@ export default {
     create,
     getAll,
     getLatest,
+    getOne,
 }
