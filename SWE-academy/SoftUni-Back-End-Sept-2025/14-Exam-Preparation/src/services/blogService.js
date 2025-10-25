@@ -26,8 +26,11 @@ function follow(blogId, userId) {
 }
 
 function remove(blogId, userId) {
-
     return Blog.findByIdAndDelete(blogId);
+}
+
+function edit(blogId, blogData) {
+    return Blog.findByIdAndUpdate(blogId, blogData, { runValidators: true });
 }
 
 export default {
@@ -37,4 +40,5 @@ export default {
     getOne,
     follow,
     remove,
+    edit,
 }

@@ -199,17 +199,17 @@
 
 ### Delete blog
 
-- [ ] Fix navigation link in details
-- [ ] Add delete action
-- [ ] Add delete method in blog service
+- [x] Fix navigation link in details
+- [x] Add delete action
+- [x] Add delete method in blog service
 
 ### Edit blog
 
-- [ ] Fix navigation link in details
-- [ ] Add get edit action
-- [ ] Show empty edit page
-- [ ] Populate edit form with blog data
-- [ ] Add post edit action
+- [x] Fix navigation link in details
+- [x] Add get edit action
+- [x] Show empty edit page
+- [x] Populate edit form with blog data
+- [x] Add post edit action
 - [ ] Add edit method in blog service
 - [ ] Add error handling
 

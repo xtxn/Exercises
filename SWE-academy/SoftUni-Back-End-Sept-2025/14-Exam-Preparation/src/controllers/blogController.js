@@ -61,6 +61,30 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
     await blogService.remove(blogId, userId);
 
     res.redirect('/blogs/catalog');
+});
+
+blogController.get('/:blogId/edit', async (req, res) => {
+    const blogId = req.params.blogId;
+    const blog = await blogService.getOne(blogId);
+
+    res.render('blogs/edit', { blog });
+});
+
+blogController.post('/:blogId/edit', isAuth, async (req, res) => {
+    const blogId = req.params.blogId;
+    const blogData = req.body;
+    const userId = req.user.id;
+
+    try {
+        await blogService.edit(blogId, blogData);
+
+        res.redirect(`/blogs/${blogId}/details`);
+    } catch (error) {
+        res.render('blogs/edit', {
+            blog: blogData,
+            error: getErrorMessage(error),
+        });
+    }
 })
 
 export default blogController;
