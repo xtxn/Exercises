@@ -40,6 +40,14 @@ function edit(blogId, blogData) {
     return Blog.findByIdAndUpdate(blogId, blogData, { runValidators: true });
 }
 
+function getAllByOwner(ownerId) {
+    return Blog.find({ owner: ownerId });
+}
+
+function getAllByFollower(followerId) {
+    return Blog.find().in('followers', followerId);
+}
+
 export default {
     create,
     getAll,
@@ -48,4 +56,6 @@ export default {
     follow,
     remove,
     edit,
+    getAllByOwner,
+    getAllByFollower,
 }

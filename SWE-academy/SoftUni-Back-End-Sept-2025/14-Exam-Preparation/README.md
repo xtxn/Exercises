@@ -215,11 +215,11 @@
 
 ### Profile
 
-- [ ] Fix navigation link
-- [ ] Show static profile page
-- [ ] Show dynamic user information
-- [ ] Show created blogs
-- [ ] Show followed blogs
+- [x] Fix navigation link
+- [x] Show static profile page
+- [x] Show dynamic user information
+- [x] Show created blogs
+- [x] Show followed blogs
 
 ## Validation and error handling
 

@@ -2,6 +2,7 @@ import { Router } from "express";
 import userService from "../services/userService.js";
 import { isAuth, isGuest } from "../middlewares/authMiddleware.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
+import blogService from "../services/blogService.js";
 
 const userController = Router();
 
@@ -47,5 +48,16 @@ userController.get('/logout', isAuth, (req, res) => {
     res.clearCookie('auth');
     res.redirect('/');
 });
+
+userController.get('/profile', isAuth, async (req, res) => {
+    const userId = req.user.id;
+    const createdBlogs = await blogService.getAllByOwner(userId);
+    const followedBlogs = await blogService.getAllByFollower(userId);
+
+    const createdBlogsCount = createdBlogs.length;
+    const followedBlogsCount = followedBlogs.length;
+
+    res.render('users/profile', { createdBlogs, followedBlogs, createdBlogsCount, followedBlogsCount });
+})
 
 export default userController;
