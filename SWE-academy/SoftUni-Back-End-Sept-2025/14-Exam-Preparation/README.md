@@ -175,8 +175,8 @@
 
 ### Home page blogs
 
-- [ ] Add get latest blogs in blog service
-- [ ] Show dynamic latest blogs on home
+- [x] Add get latest blogs in blog service
+- [x] Show dynamic latest blogs on home
 
 ### Blog details
 

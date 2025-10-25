@@ -11,7 +11,14 @@ function create(blogData, userId) {
     });
 }
 
+function getLatest() {
+    return Blog.find()
+        .sort({ _id: -1 })
+        .limit(3)
+}
+
 export default {
     create,
     getAll,
+    getLatest,
 }
