@@ -25,10 +25,16 @@ function follow(blogId, userId) {
     return Blog.findByIdAndUpdate(blogId, { $push: { followers: userId } });
 }
 
+function remove(blogId, userId) {
+
+    return Blog.findByIdAndDelete(blogId);
+}
+
 export default {
     create,
     getAll,
     getLatest,
     getOne,
     follow,
+    remove,
 }

@@ -54,4 +54,13 @@ blogController.get('/:blogId/follow', isAuth, async (req, res) => {
     res.redirect(`/blogs/${blogId}/details`);
 });
 
+blogController.get('/:blogId/delete', isAuth, async (req, res) => {
+    const blogId = req.params.blogId;
+    const userId = req.user.id;
+
+    await blogService.remove(blogId, userId);
+
+    res.redirect('/blogs/catalog');
+})
+
 export default blogController;
