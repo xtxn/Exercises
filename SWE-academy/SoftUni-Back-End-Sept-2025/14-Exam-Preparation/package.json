@@ -1,0 +1,21 @@
+{
+  "name": "13-exam-preparation",
+  "version": "1.0.0",
+  "description": "Friendly World",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch ./src/index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.2"
+  }
+}

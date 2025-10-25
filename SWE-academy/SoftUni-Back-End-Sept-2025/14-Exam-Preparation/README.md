@@ -1,0 +1,228 @@
+# SoftUni JS Back-End Exam Preparation Cheat Sheet
+
+## Create Skeleton Project
+
+#### 1. Initialize Project
+
+- [x] Initialize npm project
+- [x] Change module system
+- [x] Add start file `/src/index.js`
+- [x] Add dev script
+- [x] Config debugger
+- [x] Add resources
+
+### 2. Express
+
+- [x] Install express
+- [x] Init express server
+- [x] Setup static middleware
+- [x] Add body parser `form parser - urlencoded({extended: false})`
+- [ ] Add JSON parser `optional`
+- [x] Add routes file
+- [x] Add home controller
+- [x] Add error controller `404 Page`
+
+### 3. Handlebars
+
+- [x] Install handlebars `express-handlebars`
+- [x] Config handlebars engine
+- [x] Config handlebars file extension
+- [x] Use handlebars engine
+- [x] Set views folder
+- [x] Add home view /in home controller/
+- [x] Render home view without layout `{layout: false}`
+- [x] Fix assets paths in html/hbs
+- [x] Add layout /remove from html/hbs/ and remove `{layout: false}`
+- [x] Add partials dir
+- [x] Config handlebars to work with mongoose documents `omit lean()`
+  - [x] `runtimeOptions : { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true }`
+
+### 4. Database
+
+- [x] Install mongoose
+- [x] Connect to db
+- [x] Add Error handling on connect
+- [x] Add simple user model
+
+### 5. Register
+
+- [x] Fix navigation links
+- [x] Add user controller
+- [x] Add user controller to routes
+- [x] Create register view
+- [x] Render register view
+- [x] Modify register form
+- [x] Create post route for register
+- [x] Create user service
+- [x] Redirect after successful register
+- [x] Install bcrypt
+- [x] Hash password before save
+- [x] BONUS: Check if user exists
+
+### 6. Login
+
+- [x] Fix login navigation link
+- [x] Add login view
+- [x] Crete get login action
+- [x] Fix login form
+- [x] Add post login action
+- [x] Add login method in userService
+- [x] Validate if user exists
+- [x] Validate password
+- [x] Install jsonwebtoken
+- [x] Generate token
+- [x] Call userService from userController
+- [x] Send token as cookie
+- [x] Redirect to homepage
+- [x] BONUS: Extract jwt secret to constant or env
+- [x] Auto login on register
+
+### 7. Logout
+
+- [x] Add logout navigation link
+- [x] Add logout action
+
+### 8. Authentication
+
+- [x] Install and use cookie-parser
+- [x] Create auth middleware
+  - [x] Allow if guest (no token)
+  - [x] Verify token (clear session if invalid)
+  - [x] Attach decoded token to req.user (of token)
+- [x] Use auth middleware
+
+### 9. Authorization
+
+- [x] Create isAuth middleware
+- [x] Create isGuest middleware
+- [x] Add route guards /in userController/
+- [x] Add not found page
+
+### 10. Dynamic content
+
+- [x] Add use data to handlebars context
+- [x] Dynamic navigation
+- [x] Dynamic page titles
+- [ ] BONUS: Set page title from view
+
+### 11. Error handling and Validation
+
+- [x] Add error message in notification
+- [x] Notification conditional rendering
+- [x] Create getErrorMessage util function
+- [x] Add error handling for register
+- [x] Add register form data persistence
+- [x] Check repeat password
+- [ ] BONUS: Check repeatPassword in model
+- [x] Error handling and data persistence on login
+
+### Bonus
+
+- [ ] Export helpers into separate module
+- [ ] Add env variable for debugging `dotenv`
+- [ ] Add global error handler
+- [ ] Add bundler
+- [ ] Use async jwt
+- [ ] Refresh token
+
+## Steps to Use the Skeleton Project
+
+- [ ] Install dependencies `npm i`
+- [ ] Remove old resources and add new resources `/src/public`
+- [ ] Add html files to the views folder
+- [ ] Rename database name
+- [ ] Replace layout
+  - [ ] Dynamic title
+  - [ ] Fix resource routes
+  - [ ] Error notification
+  - [ ] Body
+  - [ ] Dynamic Navigation
+- [ ] Replace home page
+- [ ] Modify navigation links
+- [ ] Modify User model
+- [ ] Modify login and register controller
+- [ ] Modify login and register service
+- [ ] Modify token generation
+- [ ] Modify login and register error handlers
+- [ ] Replace login page
+- [ ] Replace register page
+- [ ] Replace 404 page
+
+## Solve Mind Blog Exam Prep
+
+### Create Blog Page
+
+- [ ] Fix create blog navigation link
+- [ ] Add blog controller
+- [ ] Add controller to routes
+- [ ] Add create action with render
+- [ ] Add blogs folder in views
+- [ ] Add create blog view
+- [ ] Add blog model
+- [ ] Modify create blog form
+- [ ] Create blog post action
+- [ ] Create blog service with create method
+- [ ] Add owner on blog creation
+- [ ] Add error handling
+
+### Blogs Catalog Page
+
+- [] Fix navigation link
+- [] Add catalog view
+- [] Add get catalog action with static blogs
+- [] Get all blogs service
+- [] Show dynamic blogs 
+
+### Home page blogs
+
+- [ ] Add get latest blogs in blog service
+- [ ] Show dynamic lastest blogs on home
+
+### Blog details
+
+- [ ] Fix details link in blogs page
+- [ ] Fix details link in home page
+- [ ] Show static details page
+- [ ] Add getOne method in blog service
+- [ ] Show dynamic details page (without author and followers)
+- [ ] Show dynamic author
+- [ ] Hide buttons if not logged
+- [ ] Show edit and delete button if author
+- [ ] Show follow and already following buttons if logged
+- [ ] Implement follow functionallity
+  - [ ] Add followers in blog relation
+  - [ ] Add follow action
+  - [ ] Add follow service method
+  - [ ] Fix follow link
+- [ ] Show dynamic follwers
+- [ ] Show follow button or already following buttons conditionally
+
+### Delete blog
+
+- [ ] Fix navigation link in details
+- [ ] Add delete action
+- [ ] Add delete method in blog service
+
+### Edit blog
+
+- [ ] Fix navigation link in details
+- [ ] Add get edit action
+- [ ] Show empty edit page
+- [ ] Populate edit form with blog data
+- [ ] Add post edit action
+- [ ] Add edit method in blog service
+- [ ] Add error handling
+
+### Profile
+
+- [ ] Fix navigation link
+- [ ] Show static profile page
+- [ ] Show dynamic user information
+- [ ] Show created blogs
+- [ ] Show followed blogs
+
+## Validation and error handling
+
+### Bonus 1
+
+- [ ] Fix sort(_id) problem
