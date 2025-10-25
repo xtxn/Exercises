@@ -167,11 +167,11 @@
 
 ### Blogs Catalog Page
 
-- [] Fix navigation link
-- [] Add catalog view
-- [] Add get catalog action with static blogs
-- [] Get all blogs service
-- [] Show dynamic blogs
+- [x] Fix navigation link
+- [x] Add catalog view
+- [x] Add get catalog action with static blogs
+- [x] Get all blogs service
+- [x] Show dynamic blogs
 
 ### Home page blogs
 

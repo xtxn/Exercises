@@ -5,6 +5,12 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 
 const blogController = Router();
 
+blogController.get('/catalog', async (req, res) => {
+    const blogs = await blogService.getAll();
+
+    res.render('blogs/catalog', { blogs });
+});
+
 blogController.get('/create', isAuth, (req, res) => {
     res.render('blogs/create');
 });
@@ -15,7 +21,7 @@ blogController.post('/create', isAuth, async (req, res) => {
 
     try {
         await blogService.create(blogData, userId);
-        res.redirect('/blogs')
+        res.redirect('/blogs/catalog')
 
     } catch (error) {
         res.render('blogs/create', {

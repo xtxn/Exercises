@@ -1,5 +1,9 @@
 import Blog from '../models/Blog.js'
 
+function getAll() {
+    return Blog.find();
+}
+
 function create(blogData, userId) {
     return Blog.create({
         ...blogData,
@@ -9,4 +13,5 @@ function create(blogData, userId) {
 
 export default {
     create,
+    getAll,
 }
