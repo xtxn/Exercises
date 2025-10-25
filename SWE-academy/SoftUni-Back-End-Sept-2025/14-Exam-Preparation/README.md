@@ -210,8 +210,8 @@
 - [x] Show empty edit page
 - [x] Populate edit form with blog data
 - [x] Add post edit action
-- [ ] Add edit method in blog service
-- [ ] Add error handling
+- [x] Add edit method in blog service
+- [x] Add error handling
 
 ### Profile
 

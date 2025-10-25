@@ -57,17 +57,32 @@ blogController.get('/:blogId/follow', isAuth, async (req, res) => {
 blogController.get('/:blogId/delete', isAuth, async (req, res) => {
     const blogId = req.params.blogId;
     const userId = req.user.id;
+    try {
+        await blogService.remove(blogId, userId);
+        res.redirect('/blogs/catalog');
 
-    await blogService.remove(blogId, userId);
-
-    res.redirect('/blogs/catalog');
+    } catch (error) {
+        res.render('404', {
+            error: getErrorMessage(error),
+        });
+    }
 });
 
-blogController.get('/:blogId/edit', async (req, res) => {
+blogController.get('/:blogId/edit', isAuth, async (req, res) => {
     const blogId = req.params.blogId;
     const blog = await blogService.getOne(blogId);
 
-    res.render('blogs/edit', { blog });
+    try {
+        if (!blog.owner.equals(req.user.id)) {
+            throw new Error('Cannot edit if not owner')
+        }
+        res.render('blogs/edit', { blog });
+
+    } catch (error) {
+        res.render('404', {
+            error: getErrorMessage(error)
+        });
+    }
 });
 
 blogController.post('/:blogId/edit', isAuth, async (req, res) => {
