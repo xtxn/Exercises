@@ -1,7 +1,7 @@
 import Blog from '../models/Blog.js'
 
 function getOne(blogId) {
-    return Blog.findById(blogId);
+    return Blog.findById(blogId).populate('owner');
 }
 
 function getAll() {
