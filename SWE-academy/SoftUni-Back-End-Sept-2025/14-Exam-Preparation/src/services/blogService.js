@@ -1,7 +1,7 @@
 import Blog from '../models/Blog.js'
 
 function getOne(blogId) {
-    return Blog.findById(blogId).populate('owner');
+    return Blog.findById(blogId).populate(['owner', 'followers']);
 }
 
 function getAll() {
@@ -21,9 +21,14 @@ function getLatest() {
         .limit(3)
 }
 
+function follow(blogId, userId) {
+    return Blog.findByIdAndUpdate(blogId, { $push: { followers: userId } });
+}
+
 export default {
     create,
     getAll,
     getLatest,
     getOne,
+    follow,
 }

@@ -185,17 +185,17 @@
 - [x] Show static details page
 - [x] Add getOne method in blog service
 - [x] Show dynamic details page (without author and followers)
-- [ ] Show dynamic author
-- [ ] Hide buttons if not logged
-- [ ] Show edit and delete button if author
-- [ ] Show follow and already following buttons if logged
+- [x] Show dynamic author
+- [x] Hide buttons if not logged
+- [x] Show edit and delete button if author
+- [x] Show follow and already following buttons if logged
 - [ ] Implement follow functionality
-  - [ ] Add followers in blog relation
-  - [ ] Add follow action
-  - [ ] Add follow service method
-  - [ ] Fix follow link
-- [ ] Show dynamic followers
-- [ ] Show follow button or already following buttons conditionally
+  - [x] Add followers in blog relation
+  - [x] Add follow action
+  - [x] Add follow service method
+  - [x] Fix follow link
+- [x] Show dynamic followers
+- [x] Show follow button or already following buttons conditionally
 
 ### Delete blog
 
