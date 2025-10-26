@@ -7,6 +7,10 @@ function create(mythData, userId) {
     });
 }
 
+function getOne(mythId) {
+    return Myth.findById(mythId);
+}
+
 function getAll() {
     return Myth.find();
 }
@@ -14,11 +18,12 @@ function getAll() {
 function getSorted() {
     return Myth.find()
         .sort({ _id: -1 })
-        .limit(3)
+        .limit(3);
 }
 
 export default {
     create,
     getAll,
     getSorted,
+    getOne,
 }

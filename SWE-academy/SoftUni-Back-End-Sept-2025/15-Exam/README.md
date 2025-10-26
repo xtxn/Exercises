@@ -152,39 +152,39 @@
 
 ### Create Blog Page
 
-- [] Fix create blog navigation link
-- [] Add blog controller
-- [] Add controller to routes
-- [] Add create action with render
-- [] Add blogs folder in views
-- [] Add create blog view
-- [] Add blog model
-- [] Modify create blog form
-- [] Create blog post action
-- [] Create blog service with create method
-- [] Add owner on blog creation
-- [] Add error handling
+- [x] Fix create blog navigation link
+- [x] Add blog controller
+- [x] Add controller to routes
+- [x] Add create action with render
+- [x] Add blogs folder in views
+- [x] Add create blog view
+- [x] Add blog model
+- [x] Modify create blog form
+- [x] Create blog post action
+- [x] Create blog service with create method
+- [x] Add owner on blog creation
+- [x] Add error handling
 
 ### Blogs Catalog Page
 
-- [] Fix navigation link
-- [] Add catalog view
-- [] Add get catalog action with static blogs
-- [] Get all blogs service
-- [] Show dynamic blogs
+- [x] Fix navigation link
+- [x] Add catalog view
+- [x] Add get catalog action with static blogs
+- [x] Get all blogs service
+- [x] Show dynamic blogs
 
 ### Home page blogs
 
-- [] Add get latest blogs in blog service
-- [] Show dynamic latest blogs on home
+- [x] Add get latest blogs in blog service
+- [x] Show dynamic latest blogs on home
 
 ### Blog details
 
-- [] Fix details link in blogs page
-- [] Fix details link in home page
-- [] Show static details page
-- [] Add getOne method in blog service
-- [] Show dynamic details page (without author and followers)
+- [x] Fix details link in blogs page
+- [x] Fix details link in home page
+- [x] Show static details page
+- [x] Add getOne method in blog service
+- [x] Show dynamic details page (without author and followers)
 - [] Show dynamic author
 - [] Hide buttons if not logged
 - [] Show edit and delete button if author

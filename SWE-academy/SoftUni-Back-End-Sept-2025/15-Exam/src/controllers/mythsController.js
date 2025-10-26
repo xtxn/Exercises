@@ -32,8 +32,11 @@ mythsController.post('/create', isAuth, async (req, res) => {
     }
 });
 
-mythsController.get('/:mythId/details', (req, res) => {
-    res.render('myths/details');
+mythsController.get('/:mythId/details', async (req, res) => {
+    const mythId = req.params.mythId;
+    const myth = await mythService.getOne(mythId);
+
+    res.render('myths/details', { myth });
 })
 
 export default mythsController;
