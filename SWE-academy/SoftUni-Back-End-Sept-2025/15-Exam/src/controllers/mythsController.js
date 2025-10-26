@@ -38,8 +38,38 @@ mythsController.get('/:mythId/details', async (req, res) => {
 
     const myth = await mythService.getOne(mythId);
     const isOwner = myth.owner.equals(userId);
-    const isLiked = true;
+
+    const isLiked = myth.likedList.some(like => like.equals(userId));
+
     res.render('myths/details', { myth, isOwner, isLiked });
-})
+});
+
+mythsController.get('/:mythId/like', isAuth, async (req, res) => {
+    const mythId = req.params.mythId;
+    const userId = req.user.id;
+
+    await mythService.like(mythId, userId);
+
+    res.redirect(`/myths/${mythId}/details`);
+});
+
+mythsController.get('/:mythId/edit', isAuth, (req, res) => {
+    res.render('myths/edit');
+});
+
+mythsController.get('/:mythId/delete', isAuth, async (req, res) => {
+    const mythId = req.params.mythId;
+    const userId = req.user?.id;
+
+    try {
+        await mythService.remove(mythId, userId);
+        res.redirect('/myths/dashboard');
+
+    } catch (error) {
+        res.render('404', {
+            error: getErrorMessage(error),
+        });
+    }
+});
 
 export default mythsController;

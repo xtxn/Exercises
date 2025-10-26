@@ -21,9 +21,25 @@ function getSorted() {
         .limit(3);
 }
 
+function like(mythId, userId) {
+    return Myth.findByIdAndUpdate(mythId, { $push: { likedList: userId } });
+}
+
+async function remove(mythId, userId) {
+    const myth = await Myth.findById(mythId);
+
+    if (!myth.owner.equals(userId)) {
+        throw new Error('Cannot delete if not the creator')
+    }
+
+    return Myth.findByIdAndDelete(mythId)
+}
+
 export default {
     create,
     getAll,
     getSorted,
     getOne,
+    like,
+    remove,
 }

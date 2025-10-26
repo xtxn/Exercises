@@ -189,13 +189,13 @@
 - [x] Hide buttons if not logged
 - [x] Show edit and delete button if author
 - [x] Show follow and already following buttons if logged
-- [ ] Implement follow functionality
-  - [] Add followers in blog relation
-  - [] Add follow action
-  - [] Add follow service method
-  - [] Fix follow link
-- [] Show dynamic followers
-- [] Show follow button or already following buttons conditionally
+- [x] Implement follow functionality
+  - [x] Add followers in blog relation
+  - [x] Add follow action
+  - [x] Add follow service method
+  - [x] Fix follow link
+- [x] Show dynamic followers
+- [x] Show follow button or already following buttons conditionally
 
 ### Delete blog
 
