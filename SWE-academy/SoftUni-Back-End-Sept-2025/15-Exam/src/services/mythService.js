@@ -7,6 +7,11 @@ function create(mythData, userId) {
     });
 }
 
+function getAll() {
+    return Myth.find();
+}
+
 export default {
     create,
+    getAll,
 }

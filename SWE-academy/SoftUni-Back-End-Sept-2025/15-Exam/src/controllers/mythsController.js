@@ -5,12 +5,13 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 
 const mythsController = new Router();
 
-mythsController.get('/dashboard', (req, res) => {
-    res.render('myths/dashboard');
+mythsController.get('/dashboard', async (req, res) => {
+    const myths = await mythService.getAll();
+    res.render('myths/dashboard', { myths, pageTitle: 'Dashboard' });
 })
 
 mythsController.get('/create', isAuth, (req, res) => {
-    res.render('myths/create')
+    res.render('myths/create', { pageTitle: 'Create' })
 });
 
 mythsController.post('/create', isAuth, async (req, res) => {
@@ -26,6 +27,7 @@ mythsController.post('/create', isAuth, async (req, res) => {
         res.render('myths/create', {
             error: getErrorMessage(error),
             myth: mythData,
+            pageTitle: 'Create',
         });
     }
 });
