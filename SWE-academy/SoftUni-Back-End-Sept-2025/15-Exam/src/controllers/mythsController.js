@@ -90,6 +90,7 @@ mythsController.get('/:mythId/edit', isAuth, async (req, res) => {
 mythsController.post('/:mythId/edit', isAuth, async (req, res) => {
     const mythId = req.params.mythId;
     const mythData = req.body;
+    const myth = await mythService.getOne(mythId);
 
     try {
         if (!myth.owner.equals(req.user.id)) {

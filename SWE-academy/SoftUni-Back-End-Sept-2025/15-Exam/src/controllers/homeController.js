@@ -9,8 +9,11 @@ homeController.get('/', async (req, res) => {
     res.render('home', { latest });
 });
 
-homeController.get('/report', (req, res) => {
-    res.render('report');
+homeController.get('/report', async (req, res) => {
+
+    const latest = await mythService.getSorted();
+
+    res.render('report', { latest });
 })
 
 export default homeController;

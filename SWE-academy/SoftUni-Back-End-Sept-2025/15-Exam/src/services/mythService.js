@@ -16,7 +16,7 @@ function getAll() {
 }
 
 function getSorted() {
-    return Myth.find()
+    return Myth.find().populate('owner')
         .sort({ _id: -1 })
         .limit(3);
 }
