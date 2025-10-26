@@ -34,9 +34,12 @@ mythsController.post('/create', isAuth, async (req, res) => {
 
 mythsController.get('/:mythId/details', async (req, res) => {
     const mythId = req.params.mythId;
-    const myth = await mythService.getOne(mythId);
+    const userId = req.user?.id;
 
-    res.render('myths/details', { myth });
+    const myth = await mythService.getOne(mythId);
+    const isOwner = myth.owner.equals(userId);
+    const isLiked = true;
+    res.render('myths/details', { myth, isOwner, isLiked });
 })
 
 export default mythsController;

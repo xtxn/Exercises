@@ -8,7 +8,7 @@ function create(mythData, userId) {
 }
 
 function getOne(mythId) {
-    return Myth.findById(mythId);
+    return Myth.findById(mythId).populate('owner');
 }
 
 function getAll() {
