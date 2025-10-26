@@ -2,13 +2,13 @@ import { Router } from "express";
 import homeController from "./controllers/homeController.js";
 import errorController from "./controllers/errorController.js";
 import userController from "./controllers/userController.js";
-import postsController from "./controllers/postsController.js";
+import mythsController from "./controllers/mythsController.js";
 
 const routes = Router();
 
 routes.use(homeController);
 routes.use('/users/', userController);
-routes.use('/posts/', postsController)
+routes.use('/myths/', mythsController)
 
 
 routes.use(errorController);
