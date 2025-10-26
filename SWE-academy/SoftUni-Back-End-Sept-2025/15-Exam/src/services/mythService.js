@@ -30,9 +30,13 @@ async function remove(mythId, userId) {
 
     if (!myth.owner.equals(userId)) {
         throw new Error('Cannot delete if not the creator')
-    }
+    };
 
-    return Myth.findByIdAndDelete(mythId)
+    return Myth.findByIdAndDelete(mythId);
+}
+
+function edit(mythId, mythData) {
+    return Myth.findByIdAndUpdate(mythId, mythData, { runValidators: true });
 }
 
 export default {
@@ -42,4 +46,5 @@ export default {
     getOne,
     like,
     remove,
+    edit,
 }

@@ -3,17 +3,16 @@
     <section id="edit">
         <div class="form">
             <h2>Edit Myth or Legend</h2>
-            <form class="edit-form">
-                <input type="text" id="name" placeholder="Name" value="Zeus" />
+            <form class="edit-form" method="POST">
+                <input type="text" id="name" placeholder="Name" value="{{myth.name}}" name="name"/>
                 <input type="text" id="origin" placeholder="Origin (e.g. Greek, Norse, Egyptian)"
-                    value="Greek Mythology" />
-                <input type="text" id="role" placeholder="Role" value="King of the Gods, God of the Sky" />
-                <input type="text" id="myth-img" placeholder="Image URL" value="./static/images/zeus.webp" />
-                <input type="text" id="symbol" placeholder="Symbol / Attribute" value="Thunderbolt, Eagle" />
-                <input type="text" id="era" placeholder="Era or Period" value="Classical Antiquity" />
+                    value="{{myth.origin}}" name="origin" />
+                <input type="text" id="role" placeholder="Role" value="{{myth.role}}" name="role" />
+                <input type="text" id="myth-img" placeholder="Image URL" value="{{myth.imageUrl}}" name="imageUrl" />
+                <input type="text" id="symbol" placeholder="Symbol / Attribute" value="{{myth.symbol}}" name="symbol" />
+                <input type="text" id="era" placeholder="Era or Period" value="{{myth.era}}" name="era" />
 
-                <textarea id="description" placeholder="Description..." name="">Zeus is the chief deity in Greek mythology, ruler of Mount Olympus and god of the sky, thunder, and lightning. He is often depicted holding a thunderbolt and is known for maintaining order among gods and humans.
-                </textarea>
+                <textarea id="description" placeholder="Description..." name="description">{{myth.description}}</textarea>
                 <button type="submit">Edit</button>
             </form>
 

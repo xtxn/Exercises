@@ -53,9 +53,6 @@ mythsController.get('/:mythId/like', isAuth, async (req, res) => {
     res.redirect(`/myths/${mythId}/details`);
 });
 
-mythsController.get('/:mythId/edit', isAuth, (req, res) => {
-    res.render('myths/edit');
-});
 
 mythsController.get('/:mythId/delete', isAuth, async (req, res) => {
     const mythId = req.params.mythId;
@@ -67,6 +64,37 @@ mythsController.get('/:mythId/delete', isAuth, async (req, res) => {
 
     } catch (error) {
         res.render('404', {
+            error: getErrorMessage(error),
+        });
+    }
+});
+
+mythsController.get('/:mythId/edit', isAuth, async (req, res) => {
+    const mythId = req.params.mythId;
+    const myth = await mythService.getOne(mythId);
+    try {
+        if (!myth.owner.equals(req.user.id)) {
+            throw new Error('Cannot edit myth if not the creator')
+        }
+        res.render('myths/edit', { myth });
+    } catch (error) {
+        res.render('404', {
+            error: getErrorMessage(error)
+        });
+    }
+});
+
+mythsController.post('/:mythId/edit', isAuth, async (req, res) => {
+    const mythId = req.params.mythId;
+    const mythData = req.body;
+
+    try {
+        await mythService.edit(mythId, mythData);
+        res.redirect(`/myths/${mythId}/details`);
+
+    } catch (error) {
+        res.render('myths/edit', {
+            myth: mythData,
             error: getErrorMessage(error),
         });
     }
