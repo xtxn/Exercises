@@ -1,9 +1,12 @@
 import { Router } from "express";
+import mythService from "../services/mythService.js";
 
 const homeController = Router();
 
-homeController.get('/', (req, res) => {
-    res.render('home');
+homeController.get('/', async (req, res) => {
+
+    const latest = await mythService.getSorted();
+    res.render('home', { latest });
 });
 
 // homeController.post('/', (req, res) => {
