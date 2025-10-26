@@ -9,9 +9,8 @@ homeController.get('/', async (req, res) => {
     res.render('home', { latest });
 });
 
-// homeController.post('/', (req, res) => {
-//     console.log(req.body);
-//     res.end();
-// });
+homeController.get('/report', (req, res) => {
+    res.render('report');
+})
 
 export default homeController;

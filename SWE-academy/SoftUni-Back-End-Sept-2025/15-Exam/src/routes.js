@@ -10,7 +10,6 @@ routes.use(homeController);
 routes.use('/users/', userController);
 routes.use('/myths/', mythsController)
 
-
 routes.use(errorController);
 
 export default routes;

@@ -5,10 +5,12 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: [true, 'User email is required'],
+        minLength: [10, 'Email should be at least 10 characters long'],
     },
     password: {
         type: String,
         required: [true, 'User password is required'],
+        minLength: [4, 'Password is too short'],
     }
 });
 
